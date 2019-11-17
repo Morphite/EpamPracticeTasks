@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Beers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="input.xsd">
+
+    <Beer xsi:type="NonAlcBeer">
+        <Name>Kronenburg Blanc</Name>
+        <Type>Blonde</Type>
+        <Al>false</Al>
+        <Manufacturer>Carlsberg</Manufacturer>
+        <Ingredients>
+            <Name>Water</Name>
+            <Name>Malt</Name>
+            <Name>Wheat</Name>
+        </Ingredients>
+        <Transparency>12</Transparency>
+        <Filter>true</Filter>
+        <NutritionalValue>147</NutritionalValue>
+        <FillChar>
+            <volume>0,5</volume>
+            <packageMaterial>glass</packageMaterial>
+        </FillChar>
+    </Beer>
+
+    <Beer xsi:type="AlcBeer">
+        <Name>Guiness</Name>
+        <Type>Stout</Type>
+        <Al>true</Al>
+        <Manufacturer>Diageo</Manufacturer>
+        <Ingredients>
+            <Name>Water</Name>
+            <Name>Malt</Name>
+            <Name>Wheat</Name>
+        </Ingredients>
+        <alcPercent>4</alcPercent>
+        <Transparency>19</Transparency>
+        <Filter>true</Filter>
+        <NutritionalValue>132</NutritionalValue>
+        <FillChar>
+            <volume>0,5</volume>
+            <packageMaterial>glass</packageMaterial>
+        </FillChar>
+    </Beer>
+
+    <Beer xsi:type="AlcBeer">
+        <Name>New</Name>
+        <Type>Stout</Type>
+        <Al>true</Al>
+        <Manufacturer>Diageo</Manufacturer>
+        <Ingredients>
+            <Name>Water</Name>
+            <Name>Malt</Name>
+            <Name>Wheat</Name>
+        </Ingredients>
+        <alcPercent>12</alcPercent>
+        <Transparency>16</Transparency>
+        <Filter>true</Filter>
+        <NutritionalValue>203</NutritionalValue>
+        <FillChar>
+            <volume>0,5</volume>
+            <packageMaterial>glass</packageMaterial>
+        </FillChar>
+    </Beer>
+
+    <Beer xsi:type="AlcBeer">
+        <Name>Test</Name>
+        <Type>Lager</Type>
+        <Al>true</Al>
+        <Manufacturer>Diageo</Manufacturer>
+        <Ingredients>
+            <Name>Water</Name>
+            <Name>Malt</Name>
+            <Name>Wheat</Name>
+        </Ingredients>
+        <alcPercent>3</alcPercent>
+        <Transparency>11</Transparency>
+        <Filter>true</Filter>
+        <NutritionalValue>153</NutritionalValue>
+        <FillChar>
+            <volume>0,5</volume>
+            <packageMaterial>glass</packageMaterial>
+        </FillChar>
+    </Beer>
+
+</Beers>

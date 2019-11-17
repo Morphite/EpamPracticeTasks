@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="Beers">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Beer" type="AbsBeer" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="AbsBeer" abstract="true"/>
+
+    <xsd:complexType name="NonAlcBeer">
+
+        <xsd:complexContent>
+            <xsd:extension base="AbsBeer">
+
+                <xsd:sequence>
+                    <xsd:element name="Name" type="xsd:string"/>
+                    <xsd:element name="Type" type="xsd:string"/>
+                    <xsd:element name="Al" type="xsd:boolean" fixed="false"/>
+                    <xsd:element name="Manufacturer" type="xsd:string"/>
+                    <xsd:sequence>
+                        <xsd:element name="Ingredients" type="Ingredients"/>
+                    </xsd:sequence>
+                    <xsd:element name="Transparency" type="xsd:string"/>
+                    <xsd:element name="Filter" type="xsd:boolean"/>
+                    <xsd:element name="NutritionalValue" type="xsd:string"/>
+                    <xsd:element name="FillChar" type="ContainerChar"/>
+                </xsd:sequence>
+
+            </xsd:extension>
+        </xsd:complexContent>
+
+    </xsd:complexType>
+
+    <xsd:complexType name="AlcBeer">
+        <xsd:complexContent>
+            <xsd:extension base="AbsBeer">
+
+                <xsd:sequence>
+                    <xsd:element name="Name" type="xsd:string"/>
+                    <xsd:element name="Type" type="xsd:string"/>
+                    <xsd:element name="Al" type="xsd:boolean" fixed="true"/>
+                    <xsd:element name="Manufacturer" type="xsd:string"/>
+                    <xsd:sequence>
+                        <xsd:element name="Ingredients" type="Ingredients"/>
+                    </xsd:sequence>
+                    <xsd:element name="alcPercent" type="xsd:string"/>
+                    <xsd:element name="Transparency" type="xsd:string"/>
+                    <xsd:element name="Filter" type="xsd:boolean"/>
+                    <xsd:element name="NutritionalValue" type="xsd:string"/>
+                    <xsd:element name="FillChar" type="ContainerChar"/>
+                </xsd:sequence>
+
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="Ingredients" mixed="true">
+        <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string" minOccurs="3" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Enumeration">
+        <xsd:sequence>
+            <xsd:element name="type" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ContainerChar">
+        <xsd:sequence>
+            <xsd:element name="volume" type="xsd:string"/>
+            <xsd:element name="packageMaterial" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

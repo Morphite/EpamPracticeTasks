@@ -1,0 +1,7 @@
+Login;Name;Email;Password
+ivanov;Ivan Ivanov;ivanov@mail.com
+ilon;Ilon Mask;spacex@mail.com
+петров;Петр Петров;petrov@gmail.com
+obama;Barack Obama;obama@gmail.com
+bush;Джордж Буш;bush@mail.com
+olen;Вася Пупкин;olen@i.ua
